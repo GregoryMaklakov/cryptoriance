@@ -1,0 +1,38 @@
+@use 'utils' as u;
+
+.button {
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: u.rem(16);
+    border-radius: 7px;
+    transition: all 0.2s ease 0s;
+    &--login {
+        font-size: u.rem(14);
+        padding: 2px 4px;
+        @media (any-hover: hover){
+            &:hover{
+                color: u.$color-blue;
+            }
+        }
+        &:focus {
+            box-shadow: 0px 0px 0px 1px u.$color-blue;
+            color: #FFFFFF;
+        }
+    }
+    &--started {
+        box-shadow: 0px 0px 0px 1px #FFFFFF;
+        padding: 7px 16px;
+        font-size: u.rem(14);
+        @media (any-hover: hover){
+            &:hover{
+                color: u.$color-blue;
+                box-shadow: 0px 0px 0px 1px u.$color-blue;
+            }
+        }
+        &:focus {
+            box-shadow: 0px 0px 0px 1px u.$color-blue;
+            color: #FFFFFF;
+        }
+    }
+}

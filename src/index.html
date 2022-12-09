@@ -1,11 +1,61 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
     <title>Cryptoriace</title>
     <link rel="stylesheet" href="./scss/style.scss" />
   </head>
-  <body>
 
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="/">
+          <img class="header__image" src="assets/svg/logo-main.svg" alt="Cryptoriace">
+        </a>
+
+        <div class="header__buttons">
+          <a href="#" class="header__button button button--login">Log in</a>
+          <a href="#" class="header__button button button--started">Get started</a>
+        </div>
+        
+        <div class="header__menu menu">
+          <button type="button" class="menu__icon icon-menu"><span></span></button>
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="" class="menu__link">Features</a></li>
+              <li class="menu__item"><a href="" class="menu__link">Testimonials</a></li>
+              <li class="menu__item"><a href="" class="menu__link">News</a></li>
+              <li class="menu__item"><a href="" class="menu__link">Privacy Policy</a></li>
+              <li class="menu__item"><a href="" class="menu__link">Terms of Use</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <section class="hero">
+     <div class="hero__container container">
+      <div class="hero__info info-block">
+       <h1 class="info-block__title title">Be the part of revolution</h1>
+       <h2 class="info-block__subtitile subtitile">
+        Join the world’s most comprehensive and secure trading platform. Buy and sell Bitcoin, Ethereum, XRP and many other cryptocurrencies with fiat or crypto.
+      </h2>
+      <a href="#" class="info-block__button button button--primary">Get started now
+        <svg class="info-block-arrow">
+          <use xlink:href="#arrow-right" />
+        </svg>
+      </a>  
+      </div>
+     </div>
+    </section>
+
+    <!-- SVG -->
+    <svg style="display: none;">
+      <svg id="arrow-right" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.34625 0.507159C7.61845 0.194937 8.09221 0.162487 8.40443 0.434681L12.9927 4.43468C13.156 4.57711 13.2498 4.78326 13.2498 5.00001C13.2498 5.21676 13.156 5.42291 12.9927 5.56534L8.40443 9.56534C8.09221 9.83753 7.61845 9.80509 7.34625 9.49286C7.07406 9.18064 7.10651 8.70687 7.41873 8.43468L10.4982 5.75001H1.49982C1.0856 5.75001 0.749817 5.41422 0.749817 5.00001C0.749817 4.5858 1.0856 4.25001 1.49982 4.25001H10.4982L7.41873 1.56534C7.10651 1.29315 7.07406 0.819382 7.34625 0.507159Z" fill="white"/>
+        </svg>
+    </svg>
   </body>
 </html>

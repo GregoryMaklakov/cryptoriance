@@ -1,3 +1,18 @@
+//Currency
+@mixin currency($sym) {
+	&::after {
+		content: "#{$sym}";
+	}
+}
+
+// Grids
+@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
+	display: grid;
+	gap: $gap;
+	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+}
+
+//Text
 @mixin text($font-size, $font-weight, $color, $line-height: false) {
   font-size: $font-size;
   font-weight: $font-weight;
@@ -7,6 +22,7 @@
   }
 }
 
+//Flex
 @mixin flex($jc: flex-start, $ai: stretch, $direction: row, $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
@@ -15,6 +31,7 @@
   flex-wrap: $wrap;
 }
 
+//Size - block
 @mixin size($size, $rounded: false) {
   width: $size;
   height: $size;
@@ -23,11 +40,28 @@
   }
 }
 
+//SVG
 @mixin svg($size, $color) {
   @include size($size);
   fill: $color;
 }
 
+//Pseudo class
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+//Margin center
+@mixin margin-auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+//Placehilder
 @mixin input-placeholder {
   &.placeholder {
     @content;
@@ -46,20 +80,30 @@
   }
 }
 
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
-  @content;
+//Transition
+@mixin transition($transition-properties...) {
+	transition-property: $transition-properties;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
 }
-
-@mixin margin-auto {
-  margin: {
-    left: auto;
-    right: auto;
-  }
+  
+// Border solid
+@mixin border($color: transparent) {
+	border: 1px solid $color;
 }
+  
+//Background image
+@mixin background-image($position: false) {
+background-size: cover;
+background-repeat: no-repeat;
+	@if $position {
+		background-position: $position;
+	}
+	@content;
+}
+//========================================================================================================================================================
 
+//Media
 $breakpoints: (
   'phone': 400px,
   'phone-wide': 480px,
@@ -81,27 +125,10 @@ $breakpoints: (
       @content;
     }
   }
-}
+} 
+//========================================================================================================================================================
 
-@mixin transition($transition-properties...) {
-  transition-property: $transition-properties;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-}
-
-@mixin border($color: transparent) {
-  border: 1px solid $color;
-}
-
-@mixin background-image($position: false) {
-  background-size: cover;
-  background-repeat: no-repeat;
-  @if $position {
-    background-position: $position;
-  }
-  @content;
-}
-
+//Padding-hack
 @mixin padding-hack($padding: 50%, $size: contain, $dev: false) {
   position: relative;
   height: 0;
