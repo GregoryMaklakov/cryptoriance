@@ -1,0 +1,93 @@
+@use '../components/utils' as u;
+
+.hero {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &__container {
+        position: relative;
+        @include u.media('tablet', max) {
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+
+    &__info {
+        width: u.percent(536px, 1238px);
+        padding-top: 10%;
+        @include u.media('tablet', max) {
+            width: 100%;
+            margin-bottom: 64px;
+            padding-top: 122px;
+        }
+    }
+    &__wrp {
+        position: absolute;
+        top: 0;
+        right: -22%;
+        width: u.percent(845px, 1238px);
+        @include u.media('tablet-wide', max) {
+            top: 10%;
+        }
+        @include u.media('tablet', max) {
+            position: relative;
+            display: block;
+            right: -44%;
+        }
+    }
+    &__image {
+        @include u.padding-hack(60.4%);
+        z-index: 2;
+        animation: shadow-pop-tl 1s ease 0s 1 normal none;
+        &::before{
+            @include u.pseudo;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 3;
+            top: -30px;
+            left: -30px;
+            filter: blur(16px);
+            background: linear-gradient(90deg, rgba(24,56,79,1) 6%, rgb(69, 21, 124) 93%);
+            background-size: 200% 200%;
+            overflow: hidden;
+            z-index: -1;
+            animation: animate-glow 10s ease infinite;
+        }
+        &::after{
+            @include u.pseudo;
+            @include u.background-image;
+            background-image: url(../assets/images/hero-btc.png);
+            width: 335.05px;
+            height: 63px;
+            bottom: 18%;
+            left: 0px;
+            z-index: 3;
+            animation: drop-right 1s ease 0.8s 1 normal forwards;
+            @include u.media('tablet', max) {
+                width: 200px;
+                bottom: 11%;
+            }
+        }
+    }
+    &__svg {
+        @include u.padding-hack(34.6%);
+        z-index: -1;
+    }
+    &__wrp-svg {
+        min-width: 100%;
+        position: absolute;
+        top: 50vh;
+        left: 0;
+        right: 0;
+        @include u.media('tablet', max) {
+            top: 100vh;
+        }
+    }
+}
+
+

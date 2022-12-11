@@ -21,7 +21,6 @@
         </div>
         
         <div class="header__menu menu">
-          <button type="button" class="menu__icon icon-menu"><span></span></button>
           <nav class="menu__body">
             <ul class="menu__list">
               <li class="menu__item"><a href="" class="menu__link">Features</a></li>
@@ -32,22 +31,34 @@
             </ul>
           </nav>
         </div>
+        <button type="button" class="menu__icon icon-menu"><span></span></button>
+
       </div>
     </header>
     
     <section class="hero">
      <div class="hero__container container">
+
       <div class="hero__info info-block">
        <h1 class="info-block__title title">Be the part of revolution</h1>
-       <h2 class="info-block__subtitile subtitile">
+       <h2 class="info-block__subtitile subtitile subtitile--hero">
         Join the world’s most comprehensive and secure trading platform. Buy and sell Bitcoin, Ethereum, XRP and many other cryptocurrencies with fiat or crypto.
       </h2>
       <a href="#" class="info-block__button button button--primary">Get started now
-        <svg class="info-block-arrow">
-          <use xlink:href="#arrow-right" />
-        </svg>
       </a>  
       </div>
+
+        <div class="hero__wrp">
+          <div class="hero__image">
+            <img src="./assets/images/hero-main.png" alt="btc-table">
+          </div>
+        </div>
+     </div>
+
+     <div class="hero__wrp-svg">
+       <div class="hero__svg">
+        <img src="./assets/svg/svg-hero.svg" alt="graf">
+       </div>
      </div>
     </section>
 
@@ -55,7 +66,9 @@
     <svg style="display: none;">
       <svg id="arrow-right" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.34625 0.507159C7.61845 0.194937 8.09221 0.162487 8.40443 0.434681L12.9927 4.43468C13.156 4.57711 13.2498 4.78326 13.2498 5.00001C13.2498 5.21676 13.156 5.42291 12.9927 5.56534L8.40443 9.56534C8.09221 9.83753 7.61845 9.80509 7.34625 9.49286C7.07406 9.18064 7.10651 8.70687 7.41873 8.43468L10.4982 5.75001H1.49982C1.0856 5.75001 0.749817 5.41422 0.749817 5.00001C0.749817 4.5858 1.0856 4.25001 1.49982 4.25001H10.4982L7.41873 1.56534C7.10651 1.29315 7.07406 0.819382 7.34625 0.507159Z" fill="white"/>
-        </svg>
+      </svg>        
     </svg>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   </body>
 </html>
