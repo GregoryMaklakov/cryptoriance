@@ -47,6 +47,7 @@
         font-size: u.rem(16);
         line-height: 19px;
         transition: all 0.3s ease 0s;
+        z-index: 5;
         &::after{
             content:'';
             background-image: url(../assets/svg/arrow-right.svg);

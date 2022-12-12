@@ -76,7 +76,7 @@
     }
     &__svg {
         @include u.padding-hack(34.6%);
-        z-index: -1;
+        z-index: -2;
     }
     &__wrp-svg {
         min-width: 100%;
