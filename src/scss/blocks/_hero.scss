@@ -36,7 +36,8 @@
         @include u.media('tablet', max) {
             position: relative;
             display: block;
-            right: -44%;
+            right: -26%;
+            width: 110vw;
         }
     }
     &__image {
@@ -51,12 +52,16 @@
             z-index: 3;
             top: -30px;
             left: -30px;
-            filter: blur(16px);
+            filter: blur(12px);
             background: linear-gradient(90deg, rgba(24,56,79,1) 6%, rgb(69, 21, 124) 93%);
             background-size: 200% 200%;
             overflow: hidden;
             z-index: -1;
             animation: animate-glow 10s ease infinite;
+            @include u.media('tablet', max) {
+                top: -15px;
+                left: -15px;
+            }
         }
         &::after{
             @include u.pseudo;
@@ -65,9 +70,8 @@
             width: 335.05px;
             height: 63px;
             bottom: 18%;
-            left: 0px;
+            left: -10%;
             z-index: 3;
-            animation: drop-right 1s ease 0.8s 1 normal forwards;
             @include u.media('tablet', max) {
                 width: 200px;
                 bottom: 11%;
@@ -76,18 +80,37 @@
     }
     &__svg {
         @include u.padding-hack(34.6%);
-        z-index: -2;
+        
     }
     &__wrp-svg {
         min-width: 100%;
         position: absolute;
-        top: 50vh;
+        top: 60vh;
         left: 0;
         right: 0;
+        z-index: -2;
         @include u.media('tablet', max) {
             top: 100vh;
         }
     }
+    &__line {
+        animation: animate-svg-line 1.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+    }
 }
+  
 
+.hero {
+    &__coins {
+        position: relative;
+    }
+    &__coin {
+        position: absolute;
+        top: 0;
+        left: 0;
+        &--eth {
+            top: 30%;
+            left: 18%;
+        }
+    }
+}
 

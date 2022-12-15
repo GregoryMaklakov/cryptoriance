@@ -28,4 +28,19 @@ body {
     left: auto;
     right: auto;
   }
+  &--scroll {
+    max-width: 1366px;
+    padding: {
+      left: u.$mobile-container-padding-x;
+      right: 0px;
+    }
+    margin: {
+      left: auto;
+      right: 0px;
+    }
+    @include u.media('desktop-wide', min) {
+      max-width: 1920px;
+
+  }
+  }
 }

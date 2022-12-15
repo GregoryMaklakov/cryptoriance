@@ -1,6 +1,9 @@
+@use 'animate.css';
+
 // Config
 @use './config/reset';
 @use './config/common';
+
 
 // Components
 @use './components/buttons';
@@ -11,6 +14,9 @@
 // Blocks
 @use './blocks/header';
 @use './blocks/hero';
+@use './blocks/features';
+@use './blocks/ease';
+@use './blocks/card-features';
 @use './blocks/info-block';
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================

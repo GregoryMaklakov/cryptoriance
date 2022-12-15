@@ -5,8 +5,9 @@
     padding: 26px 0;
 	position: fixed;
 	width: 100%;
-	//background-color: u.$color-bg;
 	z-index: 10;
+	background-color: rgba(25, 27, 37, 0.8);
+	backdrop-filter: blur(14px);
     &__container {
         display: flex;
         justify-content: space-between;
@@ -14,13 +15,18 @@
     }
     &__logo {
 		z-index: 10;
+		display: flex;
+		align-items: center;
+
     }
 
     &__image {
-        width: 148px;
+        @include u.size(24px);
+		margin-right: 10px;
     }
 
     &__buttons {
+		display: flex;
 		@include u.media('tablet', max) {
 			display: none;
 		}
@@ -45,12 +51,10 @@
     &__body {
 		@include u.media('tablet', max) {
 			position: fixed;
-			width: 100%;
-			height: 100%;
 			top: 0;
 			left: 0;
 			right: 0;
-			transform: translateY(-200%);; //скрываем меню
+			transform: translateY(-400%);; //скрываем меню
 			transition: all .5s ease 0s;
 			background-color: u.$color-bg;
 			display: flex;
@@ -60,6 +64,9 @@
 			padding-left: u.rem(15);
 			padding-right: u.rem(15);
 			padding-bottom: u.rem(30);
+			background-color: u.$color-bg;
+			height: 115vh;
+			overflow-x: auto;
 			.active & {
 				transform: translateY(0); 
 				&::before{
@@ -71,13 +78,11 @@
     }
 
     &__list {
-		@include u.media('tablet', max) {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			font-size: u.rem(24);
-			row-gap: u.rem(30);
-		}
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		font-size: u.rem(24);
+		row-gap: u.rem(30);
     }
 
     &__item {
@@ -144,3 +149,6 @@
 		}
 	}
 }
+
+
+

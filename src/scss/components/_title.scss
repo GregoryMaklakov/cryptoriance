@@ -11,5 +11,6 @@
     text-fill-color: transparent;
     @include u.media('phone-wide', max) {
         font-size: u.rem(28);
+        line-height: 33px;
     }
 }
