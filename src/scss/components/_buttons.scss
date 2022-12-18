@@ -54,10 +54,6 @@
         z-index: 5;
         &:hover {
             background-color: #0063CE;   
-            &::after {
-              opacity: 1;
-              transform: translateX(8px);
-            }
         }
         &:focus {
             box-shadow: 0px 0px 0px 1px u.$color-white;
@@ -80,6 +76,7 @@
             background-color: inherit;
             svg {
                 fill: u.$color-blue;
+                transform: scale(1.2);
             }
         }
         &:focus {

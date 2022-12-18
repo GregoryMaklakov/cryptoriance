@@ -1,0 +1,46 @@
+@use '../components/utils' as u;
+
+
+.revolution {
+    padding-bottom: 182px;
+    &__container {
+        display: flex;
+        @include u.media('tablet-wide', max){
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__images {
+        flex: 50%;
+        position: relative;
+        padding-top: 39%;
+        margin-right: 30px;
+        @include u.media('tablet-wide', max){
+            margin-right: 0px;
+            margin-bottom: 120px;
+        }
+        img {
+            position: absolute;
+            width: 100%;
+            max-width: 440px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            @include u.media('tablet-wide', max){
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+    }
+    &__info {
+        flex:50%;
+        @include u.media('tablet-wide', max){
+            margin-bottom: 56px;
+        }
+    }
+}
+
+
+

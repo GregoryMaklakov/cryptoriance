@@ -1,0 +1,39 @@
+@use '../components/utils' as u;
+
+
+.pro {
+    padding-bottom: 182px;
+    &__container {
+        display: flex;
+        @include u.media('tablet-wide', max){
+            flex-direction: column;
+        }
+    }
+    &__info {
+        flex: 50%;
+        margin-right: 30px;
+        @include u.media('tablet-wide', max){
+            margin-bottom: 56px;
+        }
+    }
+
+    &__images {
+        flex: 50%;
+        position: relative;
+        padding-top: 39%;
+        
+        img {
+            position: absolute;
+            width: 100%;
+            max-width: 440px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            @include u.media('tablet-wide', max){
+                right: 50%;
+                transform: translate(50%);
+            }
+        }
+    }
+}

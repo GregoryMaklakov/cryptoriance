@@ -6,16 +6,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
     &__container {
         position: relative;
         @include u.media('tablet', max) {
             display: flex;
             flex-direction: column;
-
         }
     }
-
     &__info {
         width: u.percent(536px, 1238px);
         padding-top: 10%;
@@ -80,7 +77,6 @@
     }
     &__svg {
         @include u.padding-hack(34.6%);
-        
     }
     &__wrp-svg {
         min-width: 100%;
@@ -90,27 +86,39 @@
         right: 0;
         z-index: -2;
         @include u.media('tablet', max) {
+            top: 80vh;
+        }
+        @include u.media('phone', max){
             top: 100vh;
         }
     }
     &__line {
         animation: animate-svg-line 1.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
     }
-}
-  
-
-.hero {
     &__coins {
         position: relative;
     }
     &__coin {
         position: absolute;
         top: 0;
-        left: 0;
+        @include u.size(64px);
+        @include u.media('tablet-small', max){
+            @include u.size(40px);
+        }
         &--eth {
-            top: 30%;
-            left: 18%;
+            top: 48%;
+            left: 17%;
+        }
+        &--btc {
+            top: 70%;
+            right: 4%;
+            @include u.media('tablet-wide', max){
+                top: 66%;
+            }
+            @include u.media('tablet-small', max){
+                top: 60%;
+            }
         }
     }
 }
-
+  
