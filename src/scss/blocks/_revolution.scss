@@ -11,7 +11,7 @@
     }
 
     &__images {
-        flex: 50%;
+        flex: 60%;
         position: relative;
         padding-top: 39%;
         margin-right: 30px;
@@ -22,7 +22,7 @@
         img {
             position: absolute;
             width: 100%;
-            max-width: 440px;
+            max-width: 604px;
             top: 0;
             left: 0;
             right: 0;
@@ -35,8 +35,10 @@
         }
     }
     &__info {
-        flex:50%;
+        flex:40%;
+        padding-left: 50px;
         @include u.media('tablet-wide', max){
+            padding-left: 0px;
             margin-bottom: 56px;
         }
     }

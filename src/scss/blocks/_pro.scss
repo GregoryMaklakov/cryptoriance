@@ -10,7 +10,7 @@
         }
     }
     &__info {
-        flex: 50%;
+        flex: 40%;
         margin-right: 30px;
         @include u.media('tablet-wide', max){
             margin-bottom: 56px;
@@ -18,7 +18,7 @@
     }
 
     &__images {
-        flex: 50%;
+        flex: 60%;
         position: relative;
         padding-top: 39%;
         

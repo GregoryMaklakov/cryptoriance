@@ -28,7 +28,7 @@
         right: -22%;
         width: u.percent(845px, 1238px);
         @include u.media('tablet-wide', max) {
-            top: 10%;
+            top: 30%;
         }
         @include u.media('tablet', max) {
             position: relative;
