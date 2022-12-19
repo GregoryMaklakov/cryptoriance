@@ -13,16 +13,6 @@
         font-size: u.rem(28);
         line-height: 33px;
     }
-    &--animation {
-        background: -moz-linear-gradient(left,  #E0E2E9 40%, #268EEC 51%, #E0E2E9 64%, #268EEC 64%);
-        background: -webkit-linear-gradient(left,  #268EEC 40%,#E0E2E9 51%,#268EEC 64%,#268EEC 64%); 
-        background-size: 400% 400%;
-    
-        animation: background-animation 4s ease-in-out infinite;  
-        
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent; 
-    }
 }
 
 
