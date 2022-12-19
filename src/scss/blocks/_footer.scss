@@ -48,6 +48,15 @@
         font-size: u.rem(14);
         line-height: 17px;
         color: #AEB4C8;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: u.$base-font-color;
+            }
+        }
+        &:focus {
+            color: u.$color-blue;
+        }
     }
 
     &__rights {
