@@ -18,24 +18,38 @@
             padding-top: 100px;
         }
         @include u.media('phone', max){
-            padding-top: 140px;
+            padding-top: 160px;
+            margin-bottom: 48px;
         }
     }
 
     &__descr {
         text-align: center;
         margin-bottom: 24px;
+        @include u.media('phone', max){
+            align-self: start;
+        }
+        
     }
 
     &__title {
         text-align: center;
         margin-bottom: 32px;
+        @include u.media('phone', max){
+            align-self: start;
+            margin-bottom: 24px;
+        }
     }
 
     &__subtitle {
         text-align: center;
         max-width: 600px;
         font-size: u.rem(18);
+        @include u.media('phone', max){
+            font-weight: 700;
+            font-size: u.rem(16);
+            text-align: left;
+        }
     }
 }
 

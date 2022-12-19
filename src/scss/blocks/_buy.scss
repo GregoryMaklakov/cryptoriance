@@ -1,0 +1,15 @@
+@use '../components/utils' as u;
+
+
+.buy {
+    @include u.background-image;
+    background-image: url(../assets/images/buy_bg.png);
+    padding-bottom: 164px;
+    padding-top: 180px;
+    border-bottom: 1px solid rgba(84, 132, 255, 0.3);
+    &__info {
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+    }
+}

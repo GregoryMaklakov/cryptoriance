@@ -6,6 +6,9 @@
     font-size: u.rem(20);
     line-height: 160%;
     color: u.$base-font-color; 
+    @include u.media('phone', max){
+        font-size: u.rem(16);
+    }
     &--hero {
         color: #AEB4C8;
         font-size: u.rem(18);

@@ -1,7 +1,7 @@
 "use strict";
 
+// Menu init https://webgolovolomki.com/kak-sdelat-gamburger-menyu-gotovyj-kod-i-podrobnoe-obyasnenie/
 
-// https://webgolovolomki.com/kak-sdelat-gamburger-menyu-gotovyj-kod-i-podrobnoe-obyasnenie/
 let menuBtn = document.querySelector('.icon-menu');
 let menu = document.querySelector('.menu');
 menuBtn.addEventListener('click', function(){
@@ -11,7 +11,7 @@ menuBtn.addEventListener('click', function(){
 
 //========================================================================================================================================================
 
-//Tabs  https://codepen.io/millisabel/pen/xxJKzyQ
+// Tabs  https://codepen.io/millisabel/pen/xxJKzyQ
 
 const tabBtn = document.querySelectorAll(".tab__btn");
 const tabContents = document.querySelectorAll(".tab__item");

@@ -1,0 +1,58 @@
+
+@use '../components/utils' as u;
+
+.footer {
+    padding: u.rem(26) u.rem(0);
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include u.media('tablet', max){
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        @include u.media('tablet', max){
+            margin-bottom: 32px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        @include u.media('tablet', max){
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin-right: 32px;
+        @include u.media('tablet', max){
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 32px;
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: u.rem(14);
+        line-height: 17px;
+        color: #AEB4C8;
+    }
+
+    &__rights {
+        font-weight: 400;
+        font-size: u.rem(14);
+        color: #646978;
+    }
+}

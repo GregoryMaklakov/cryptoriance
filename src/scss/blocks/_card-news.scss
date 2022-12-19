@@ -1,0 +1,72 @@
+@use '../components/utils' as u;
+
+.card-news {
+    display: flex;
+
+    &__body {
+        min-height: 540px;
+        position: relative;
+        @include u.media('phone', max){
+            min-height: 374px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: u.rem(24);
+        line-height: 140%;
+        color: #FFFFFF;
+        margin-bottom: 26px;
+        @include u.media('phone', max){
+            font-size: u.rem(18);
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: u.rem(18);
+        line-height: 160%;
+        color: u.$base-font-color;
+        margin-bottom: 30px;
+        @include u.media('phone', max){
+            font-size: u.rem(16);
+            margin-bottom: 24px;
+
+        }
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: u.rem(14);
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #AEB4C8;
+        @include u.media('phone', max){
+            margin-bottom: 16px;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        padding: 9px 16px;
+        background: #191B25;
+        border: 1px solid #FFFFFF;
+        border-radius: 7px;
+        bottom: 0;
+        position: absolute;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                
+            }
+        }
+        &:hover {
+            background-color: #0063CE;   
+        }
+        &:focus {
+            box-shadow: 0px 0px 0px 1px u.$color-white;
+            background-color: u.$color-blue;
+        }
+    }
+}

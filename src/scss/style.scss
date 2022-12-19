@@ -20,8 +20,17 @@
 @use './blocks/revolution';
 @use './blocks/pro';
 @use './blocks/tools';
+@use './blocks/review';
+@use './blocks/news';
+@use './blocks/buy';
+@use './blocks/footer';
+
 @use './blocks/tab';
+@use './blocks/card';
+
 @use './blocks/card-features';
+@use './blocks/card-review';
+@use './blocks/card-news';
 @use './blocks/info-block';
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================

@@ -1,0 +1,46 @@
+@use '../components/utils' as u;
+
+.card {
+    display: flex;
+    min-width: 392px;
+    position: relative;    
+    $border: 1px;
+    padding: 28px;
+    background: #272933;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+    border-radius: 8px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    &:not(:last-child) {
+        margin-right: 30px;
+        @include u.media('phone-wide', max){
+            margin-right: 14px;
+        }
+    }
+    @include u.media('phone-wide', max){
+        min-width: 330px;
+        padding: 24px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; 
+        right: 0; 
+        bottom: 0; 
+        left: 0;
+        z-index: -1;
+        margin: -$border; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(to right,rgba(97, 141, 255, 0.3), rgba(5, 215, 228, 0.3));
+    }
+    
+    @media (any-hover: hover){
+        &:hover{
+            &::before{
+                background: linear-gradient(to right,rgba(97, 141, 255), rgba(5, 215, 228));
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@use '../components/utils' as u;
+
+.card-review {
+
+    &__body {
+        display: flex;
+        gap: 18px;
+    }
+
+    &__avatar {
+        img {
+            @include u.size(38px);
+        }
+    }
+    
+    &__title {
+        display: flex;
+        margin-bottom: 12px;
+        @include u.media('phone', max){
+            flex-direction: column;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: u.rem(18);
+        line-height: 21px;
+        color: u.$color-white;
+        margin-right: 6px;
+        @include u.media('phone', max){
+            margin-bottom: 4px;
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: u.rem(18);
+        line-height: 21px;
+        color: #248DED;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: u.$color-blue;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: u.rem(16);
+        line-height: 150%;
+        color: u.$base-font-color;
+    }
+}

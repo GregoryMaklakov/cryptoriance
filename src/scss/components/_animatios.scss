@@ -60,6 +60,21 @@
     stroke-dasharray: 2089.575439453125px;
   }
 }
+// "Buy" title animation
+@-webkit-keyframes background-animation {
+  0%{background-position: 100%}
+  100%{background-position: 0%}
+}
+@-moz-keyframes background-animation {
+  0%{background-position:0% 30%}
+  50%{background-position:100% 71%}
+  100%{background-position:0% 30%}
+}
+
+@keyframes background-animation { 
+  0%{background-position: 100%}
+  100%{background-position: 0%}
+}
 
 
 //Logo text ================================================================================================================================================================================================================

@@ -2,6 +2,7 @@
 
 
 .tab {
+    margin-bottom: 200px;
     &__btns {
         display: flex;
         align-items: center;
@@ -81,14 +82,13 @@
     }
     &__items {
         position: relative;
-        
     }
     &__image {
         @include u.padding-hack(51.8%);
     }
 
     &__item {
-        position: absolute;
+        //position: absolute;
         display: none;
         width: 100%;
         animation: fadeEffect 0.6s ease;
