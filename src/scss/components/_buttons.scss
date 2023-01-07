@@ -10,8 +10,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     &__arrow-right {
-        @include u.svg(14px, u.$color-white); 
+        @include u.svg(14px, u.$color-white);
+        transition: all 0.3s ease 0s;
     }
     &--login {
         font-size: u.rem(14);
@@ -51,8 +53,19 @@
         line-height: 19px;
         transition: all 0.3s ease 0s;
         z-index: 5;
+        // Расскоментировать если не решу проблему с стрелкой через use
+       /*  &::before{
+            @include u.pseudo;
+            @include u.background-image;
+            background-image: url(../assets/svg/arrow-right.svg);
+            width: 16px;
+            height: 12px;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+        } */
         &--big {
-            padding: 20.5px 16px;
+            padding: 20.5px 16px 20.5px 0px;
         }
         &:hover {
             background-color: #0063CE;   
@@ -78,7 +91,7 @@
             background-color: inherit;
             svg {
                 fill: u.$color-blue;
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
         }
         &:focus {

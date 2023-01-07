@@ -30,6 +30,7 @@ body {
   }
   &--scroll {
     max-width: 1366px;
+    overflow: auto;
     padding: {
       left: u.$mobile-container-padding-x;
       right: 0px;
@@ -38,9 +39,8 @@ body {
       left: auto;
       right: 0px;
     }
-    @include u.media('desktop-wide', min) {
+    @include u.media('desktop-wide') {
       max-width: 1920px;
-
-  }
+    }
   }
 }
