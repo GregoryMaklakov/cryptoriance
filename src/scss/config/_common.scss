@@ -40,7 +40,7 @@ body {
       right: 0px;
     }
     @include u.media('desktop-wide') {
-      max-width: 1920px;
+      max-width: 100%;
     }
   }
 }

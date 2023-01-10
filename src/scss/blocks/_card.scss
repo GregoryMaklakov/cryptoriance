@@ -22,6 +22,10 @@
         min-width: 330px;
         padding: 24px;
     }
+    @include u.media('desktop-wide'){
+        max-width: 392px;
+        padding: 24px;
+    }
 
     &:before {
         content: '';

@@ -54,6 +54,11 @@
             animation: fade-in-bl 1s ease 2s 1 normal both;
         }
     }
+    &--05 {
+        &::before{
+            animation: fade-in-bl 1s ease 2.2s 1 normal both;
+        }
+    }
     &__icon {
         margin-bottom: 40px;
         @include u.size(75px)
