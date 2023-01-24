@@ -41,6 +41,8 @@ body {
     }
     @include u.media('desktop-wide') {
       max-width: 100%;
+      padding: 0;
+      margin: 0;
     }
   }
 }

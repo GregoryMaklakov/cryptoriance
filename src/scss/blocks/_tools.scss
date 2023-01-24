@@ -15,11 +15,11 @@
         padding-left: 14px;
         padding-right: 14px;
         @include u.media('tablet-wide', max){
-            padding-top: 100px;
+            padding-top: 160px;
             align-items: flex-start;
         }
         @include u.media('phone', max){
-            padding-top: 160px;
+            //padding-top: 200px;
             margin-bottom: 48px;
             
         }
