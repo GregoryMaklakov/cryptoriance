@@ -10,8 +10,16 @@
     background-clip: padding-box; /* !importanté */
     border: solid $border transparent; /* !importanté */
     border-radius: 8px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     cursor: pointer;
+    &:first-child {
+        margin-left: 100px;
+    }
+    @include u.media('tablet-wide', max){
+        &:first-child {
+            margin-left: 20px;
+        }
+    }
     &:not(:last-child) {
         margin-right: 30px;
         @include u.media('phone-wide', max){

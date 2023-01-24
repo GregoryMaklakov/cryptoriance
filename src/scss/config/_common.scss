@@ -29,11 +29,12 @@ body {
     right: auto;
   }
   &--scroll {
-    max-width: 1366px;
+    max-width: 100vw;
     overflow: auto;
     padding: {
       left: u.$mobile-container-padding-x;
       right: 0px;
+      left: 0;
     }
     margin: {
       left: auto;
